@@ -1,4 +1,5 @@
-﻿using EmployeeDepartmentCRUD.Domain.Models;
+﻿using EmployeeDepartmentCRUD.Domain.DTOs.EmployeeDTOs;
+using EmployeeDepartmentCRUD.Domain.Models;
 
 namespace EmployeeDepartmentCRUD.Domain.Contracts.Repositories
 {
@@ -8,7 +9,7 @@ namespace EmployeeDepartmentCRUD.Domain.Contracts.Repositories
         public Task<Employee?> GetById(int Id);
         public Task<Employee?> AddEmployee(Employee entity);
 
-        public Task<Employee?> UpdateEmployee(Employee entity);
+        public Task<Employee?> UpdateEmployee(int Id, CRUEmployeeDTO entity);
         public Task<Employee?> DeleteEmployee(int id);
     }
 }

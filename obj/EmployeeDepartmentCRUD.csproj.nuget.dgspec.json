@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Boot Camp\\source\\repos\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj": {}
+    "C:\\Users\\Boot Camp\\source\\repos\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Boot Camp\\source\\repos\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj": {
+    "C:\\Users\\Boot Camp\\source\\repos\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Boot Camp\\source\\repos\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj",
+        "projectUniqueName": "C:\\Users\\Boot Camp\\source\\repos\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj",
         "projectName": "EmployeeDepartmentCRUD",
-        "projectPath": "c:\\Users\\Boot Camp\\source\\repos\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj",
+        "projectPath": "C:\\Users\\Boot Camp\\source\\repos\\EmployeeDepartmentCRUD\\EmployeeDepartmentCRUD.csproj",
         "packagesPath": "C:\\Users\\Boot Camp\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Boot Camp\\source\\repos\\EmployeeDepartmentCRUD\\obj\\",
+        "outputPath": "C:\\Users\\Boot Camp\\source\\repos\\EmployeeDepartmentCRUD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

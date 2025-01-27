@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using EmployeeDepartmentCRUD.Data;
+using EmployeeDepartmentCRUD.Domain.DTOs.EmployeeDTOs;
 using EmployeeDepartmentCRUD.Domain.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +13,12 @@ namespace EmployeeDepartmentCRUD.Domain.Contracts.Repositories
     public class EmployeeRepository : IEmployeeRepository
     {
         private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
 
-        public EmployeeRepository(AppDbContext context)
+        public EmployeeRepository(AppDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
 
         }
 
@@ -32,8 +35,8 @@ namespace EmployeeDepartmentCRUD.Domain.Contracts.Repositories
         }
         public async Task<IEnumerable<Employee>> Get()
         {
-            var employee = _context.Employees.ToListAsync();
-            return await employee;
+            var employee = await _context.Employees.ToListAsync();
+            return employee;
         }
 
         public async Task<Employee?> GetById(int Id)
@@ -42,16 +45,14 @@ namespace EmployeeDepartmentCRUD.Domain.Contracts.Repositories
             return employee;
         }
 
-        public async Task<Employee?> UpdateEmployee(Employee entity)
+        public async Task<Employee?> UpdateEmployee(int Id, CRUEmployeeDTO entity)
         {
-            var employee = await _context.Employees.Where(c => c.EmployeeId == entity.EmployeeId).FirstOrDefaultAsync();
+            var employee = await _context.Employees.Where(c => c.EmployeeId == Id).FirstOrDefaultAsync();
             if(employee is null)
             {
                 return null;
             }
-            employee.Birthdate = entity.Birthdate;
-            employee.Name = entity.Name;
-            employee.Age = entity.Age;
+            _mapper.Map(entity, employee);
             await _context.SaveChangesAsync();
             return employee;
         }

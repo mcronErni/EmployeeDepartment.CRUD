@@ -1,4 +1,6 @@
-﻿namespace EmployeeDepartmentCRUD.Domain.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace EmployeeDepartmentCRUD.Domain.Models
 {
     public class Employee
     {
